@@ -1,91 +1,87 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import { presidents } from "Dataset";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ['latin'] })
+/*
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+*/
 
-export default function Home() {
+export default function Example() {
+  console.log("kljjafld", presidents.length);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.jsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="">
+      <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
+        <div className="space-y-12">
+          <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-mexicoGreen via-white to-mexicoRed">
+                Presidentes de México
+              </span>
+            </h2>
+            <p className="text-xl text-stone-400">
+              México ha tenido muchas personalidades que representan al poder
+              ejecutivo, ¿alguno ha hecho algo bueno por el país?
+            </p>
+            <p className="text-xl text-stone-400">
+              👆 Haz click en tu favorito para saber sus grandes hazañas como
+              mandatario.
+            </p>
+          </div>
+          <ul
+            role="list"
+            className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-4 lg:gap-x-8"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            {presidents
+              .slice(0)
+              .reverse()
+              .map((person, index) => (
+                <li key={index} className=" cursor-pointer">
+                  <Link href={`/presidente/${person.name}`}>
+                    <div className="space-y-4">
+                      <div className=" relative aspect-w-2 rounded-lg aspect-h-3">
+                        {person.isPresident && (
+                          <div className="absolute   -inset-0.5 bg-gradient-to-r from-mexicoGreen via-white to-mexicoRed  opacity-100 duration-1000  rounded-lg blur "></div>
+                          // <div className=" absolute rounded-lg bg-gradient-to-r from-mexicoGreen via-white to-mexicoRed" />
+                        )}
+                        <div className="   p-2  rounded-lg w-full h-full  ">
+                          <img
+                            className="rounded-lg  object-cover w-full h-full shadow-lg"
+                            src={person.img}
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <div className="space-y-1 text-sm font-medium leading-6">
+                          <h3>{person.name}</h3>
+                          <p className=" ">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-mexicoGreen via-white to-mexicoRed">
+                              {person.tiempo}
+                            </span>
+                          </p>
+                          <p className="text-white">
+                            Partido: {person.partido}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+          </ul>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

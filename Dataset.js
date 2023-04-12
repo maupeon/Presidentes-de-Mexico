@@ -45,7 +45,7 @@ export const presidents = [
     id: 6,
     tiempo: "1832-1833",
     name: "Manuel Gómez Pedraza",
-    img: "./images/Manuel_Gómez_Pedraza.png",
+    img: "./images/Manuel_Gomez_Pedraza.png",
     partido: "Independiente",
   },
   {
@@ -227,7 +227,7 @@ export const presidents = [
     id: 32,
     tiempo: "1847-1848",
     name: "Manuel de la Peña y Peña",
-    img: "./images/Manuel_de la peña.jpeg",
+    img: "./images/Manuel_de_la_pena.jpeg",
     partido: "Independiente",
   },
   {
@@ -255,7 +255,7 @@ export const presidents = [
     id: 36,
     tiempo: "1853",
     name: "Manuel María Lombardini",
-    img: "./images/Manuel_María_Lombardini.png",
+    img: "./images/Manuel_Maria_Lombardini.png",
     partido: "Independiente",
   },
   {
@@ -269,14 +269,14 @@ export const presidents = [
     id: 38,
     tiempo: "1855",
     name: "Martín Carrera",
-    img: "./images/Martín_Carrera.png",
+    img: "./images/Martin_Carrera.png",
     partido: "Independiente",
   },
   {
     id: 39,
     tiempo: "1855",
     name: "Rómulo Díaz de la Vega",
-    img: "./images/Rómulo_Díaz_de_la_Vega.PNG",
+    img: "./images/Romulo_Diaz_de_la_Vega.PNG",
     partido: "Independiente",
   },
   {
@@ -304,7 +304,7 @@ export const presidents = [
     id: 43,
     tiempo: "1859",
     name: "Miguel Miramón",
-    img: "./images/Miguel_Miramón.png",
+    img: "./images/Miguel_Miramon.png",
     partido: "Conservador",
   },
   {
@@ -325,7 +325,7 @@ export const presidents = [
     id: 46,
     tiempo: "1872-1876",
     name: "Sebastián Lerdo de Tejada",
-    img: "./images/Sebastián_Lerdo_de_Tejada.jpeg",
+    img: "./images/Sebastian_Lerdo_de_Tejada.jpeg",
     partido: "Liberal",
   },
   {
@@ -339,7 +339,7 @@ export const presidents = [
     id: 48,
     tiempo: "1876",
     name: "Juan Nepomuceno Méndez",
-    img: "./images/Juan_Nepomuceno_Méndez.png",
+    img: "./images/Juan_Nepomuceno_Mendez.png",
     partido: "Liberal",
   },
   {
@@ -507,7 +507,7 @@ export const presidents = [
     id: 72,
     tiempo: "1958-1964",
     name: "Adolfo López Mateos",
-    img: "./images/Adolfo_López_Mateos_(1963).jpg",
+    img: "./images/Adolfo_Lopez_Mateos_(1963).jpg",
     partido: "PRI",
   },
   {

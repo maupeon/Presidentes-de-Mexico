@@ -1,5 +1,6 @@
 import { presidents } from "Dataset";
 import Link from "next/link";
+
 export default function Example() {
   return (
     <div className="">

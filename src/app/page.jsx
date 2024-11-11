@@ -17,7 +17,6 @@ import Link from "next/link";
 */
 
 export default function Example() {
-  console.log("kljjafld", presidents.length);
   return (
     <div className="">
       <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">

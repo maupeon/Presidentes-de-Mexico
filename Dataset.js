@@ -579,6 +579,14 @@ export const presidents = [
     name: "Andrés Manuel López Obrador",
     img: "./images/Lopez.jpeg",
     partido: "MORENA",
+    isPresident: false,
+  },
+  {
+    id: 83,
+    tiempo: "2024-2030",
+    name: "Claudia Sheinbaum Pardo",
+    img: "./images/Claudia.jpg",
+    partido: "MORENA",
     isPresident: true,
   },
 ];
